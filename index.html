@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Камчатка: обратный отсчет</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7MMQ6PG7J"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камчатка: обратный отсчет</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-V7MMQ6PG7J');
-  </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-V7MMQ6PG7J');
+    </script>
 </head>
 <body>
-<div class="countdown-container">
-  <h1>Осталось:</h1>
-  <div class="countdown">
-    <div class="time">
-      <span id="days"></span>
-      <span class="label">Дней</span>
+<div class="container">
+    <!-- Левая колонка: обратный отсчет и форма -->
+    <div class="left-column">
+        <div class="countdown-container animate__animated animate__fadeInLeft">
+            <h1>Осталось:</h1>
+            <div class="countdown">
+                <div class="time">
+                    <span id="days"></span>
+                    <span class="label">Дней</span>
+                </div>
+                <div class="time">
+                    <span id="hours"></span>
+                    <span class="label">Часов</span>
+                </div>
+                <div class="time">
+                    <span id="minutes"></span>
+                    <span class="label">Минут</span>
+                </div>
+                <div class="time">
+                    <span id="seconds"></span>
+                    <span class="label">Секунд</span>
+                </div>
+            </div>
+
+            <!-- Форма для пожеланий -->
+            <div class="wishes-form">
+                <h2>Оставьте ваш комментарий:</h2>
+                <form id="wish-form">
+                    <input type="text" id="name-input" placeholder="*Имя" required>
+                    <input type="text" id="city-input" placeholder="*Город" required>
+                    <textarea id="wish-input" placeholder="*Ваш комментарий..." required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="time">
-      <span id="hours"></span>
-      <span class="label">Часов</span>
+
+    <!-- Правая колонка: отображение пожеланий -->
+    <div class="right-column">
+        <div class="wishes-container animate__animated animate__fadeInRight">
+            <h2>Комментарии:</h2>
+            <div id="wishes-list"></div>
+        </div>
     </div>
-    <div class="time">
-      <span id="minutes"></span>
-      <span class="label">Минут</span>
-    </div>
-    <div class="time">
-      <span id="seconds"></span>
-      <span class="label">Секунд</span>
-    </div>
-  </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
