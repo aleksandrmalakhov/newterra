@@ -50,9 +50,9 @@ function displayWishes() {
         wishItem.innerHTML = `
             <div class="wish-header">
                 <span>${wish.name}</span>
-                <span>${wish.city}</span>
             </div>
             <div class="wish-text">${wish.text}</div>
+            <div class="wish-city">${wish.city}</div>
             <div class="wish-footer">${wish.date}</div>`
         // <button onclick="deleteWish(${index})">Удалить</button>
         ;

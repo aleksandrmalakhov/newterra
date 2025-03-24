@@ -142,6 +142,13 @@ body::before {
     margin-bottom: 10px;
 }
 
+.wish-city {
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ccc;
+}
+
 .wish-footer {
     text-align: right;
     font-size: 0.9em;
