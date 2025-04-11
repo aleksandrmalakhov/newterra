@@ -1,5 +1,5 @@
 // Обратный отсчет (существующий код)
-const countDownDate = new Date("May 1, 2025 00:00:00").getTime();
+const countDownDate = new Date("May 3, 2025 00:00:00").getTime();
 
 const x = setInterval(function () {
     const now = new Date().getTime();
